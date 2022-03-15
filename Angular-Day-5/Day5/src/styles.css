@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+main{
+    margin:30px 50px;
+}
+main h5{
+    margin: 24px 0px;
+
+}
+section li{
+    list-style: none;
+    margin-right: 20px; 
+    padding: 5px 10px;
+    border: 1px solid #B1B1B1;
+    width: 370px;
+    
+}
+section a{
+    border-left: 1px solid #B1B1B1;
+    margin-left: 10px;
+    padding-left: 16px;
+    cursor: pointer;
+    font-size: 14px;
+}
+a:not([href]):not([class]), a:not([href]):not([class]):hover {
+    color: inherit;
+    text-decoration: underline;
+    color: blue;
+}

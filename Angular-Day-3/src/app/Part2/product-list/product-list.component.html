@@ -1,0 +1,20 @@
+<h1>Part two</h1>
+<hr>
+<form>
+    <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" [(ngModel)]="name">
+    </div> <br>
+   <div>
+        <label for="amount">Amount</label>
+        <input id="amount" type="number" name="amount" [(ngModel)]="amount">
+   </div> <br>
+   <div>
+    <button id="addProduct" class="btn btn-success" [disabled]="productList.length>=5" (click)="onSubmit()">Add</button>
+   </div>
+    </form> <br>
+    <h2>Product Lists</h2>
+<ul class="list-group">
+    <a id="{{ 'productList' + i }}"  class="list-group-item" style="cursor: pointer" *ngFor="let product of productList; let i = index"> {{product.name}} - ({{product.amount}} Rs)</a> 
+</ul>
+

@@ -1,0 +1,15 @@
+<app-timer-control (evenNumberEvent)="onEvenNumber($event)" (oddNumberEvent)="onOddNumber($event)">
+    </app-timer-control>
+
+    <div class="row">
+        <div class="col-xs-6">
+            <h2>Odd</h2>
+            <app-odd id="{{'odd' + i}}" *ngFor="let n of odd ; let i=index" [odd]="n"  [ngStyle]="{'color':'blue'}" ></app-odd>
+        </div>
+        <div class="col-xs-6">
+            <h2>Even</h2>
+            <app-even id="{{'even' + i}}" *ngFor="let n of even; let i=index" [even]="n"  [ngStyle]="{'color':'green'}"></app-even>
+        </div>
+    </div>
+
+

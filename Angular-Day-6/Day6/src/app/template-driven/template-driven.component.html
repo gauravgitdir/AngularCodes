@@ -1,0 +1,67 @@
+<section class="container">
+  <h5>Template Driven Form</h5>
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <div id="user-data">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          ngModel
+          name="email"
+          required
+          #email="ngModel"
+        />
+        <span class="error" *ngIf="!email.valid && email.touched"
+          >Please enter email</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          ngModel
+          name="password"
+          required
+          #password="ngModel"
+        />
+        <span class="error" *ngIf="!password.valid && password.touched"
+          >Please enter Password</span
+        >
+      </div>
+    </div>
+    <div>
+      <button
+        id="update"
+        class="btn btn-success"
+        type="button"
+        (click)="updatePassword()"
+      >
+        Update Password
+      </button>
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="status">Status</label>
+      <select id="status" [ngModel]="defaultStatus" name="status">
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+      </select>
+    </div>
+    <button
+      id="submit"
+      class="btn btn-success"
+      type="submit"
+      [disabled]="!form.valid"
+    >
+      Register
+    </button>
+  </form>
+
+  <div class="row" *ngIf="submitted">
+    <h6>Email : {{ user.email }}</h6>
+    <h6>Password : {{ user.password }}</h6>
+    <h6>Status : {{ user.status }}</h6>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+
+<section class="container">
+  <h5>Reactive Form</h5>
+  <form [formGroup]="form" (ngSubmit)="submitForm()">
+    <div id="user-data">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input  type="email" id="email" formControlName="email" />
+      </div>
+      <div *ngIf="form.controls.email.errors && form.controls.email.touched ">
+        <div class="error" *ngIf="form.controls.email.errors.required">Email is required</div>
+        <div class="error" *ngIf="form.controls.email.errors.pattern">Enter a valid email</div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password" />
+      </div>
+      <div *ngIf=" form.controls.password.errors && form.controls.password.touched">
+        <div class="error" *ngIf="form.controls.password.errors.required">Password is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="status">Status</label>
+      <select id="status" formControlName="status">
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+      </select>
+    </div>
+    <div formArray="departments">
+      <button id="addDepartment" class="btn btn-success" type="button" (click)="AddDepartment()">Add Department</button>
+      <div class="form-group" *ngFor="let department of form.get('departments')?.value;let i = index ">
+        <input type="text" [formControlName]="i" />
+      </div>
+    </div>
+    <br />
+    <button id="submit" class="btn btn-success" type="submit">Register</button>
+  </form>
+</section>
+

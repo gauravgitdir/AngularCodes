@@ -1,0 +1,14 @@
+<h1>Part one</h1>
+<hr>
+<div>
+    <button id="orderDetail" class="btn btn-primary" (click)="onBtnClick()">Order Detail</button> <br>
+</div>
+<p id="toggledParagraph" *ngIf="display">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+</p>
+<div id="{{ 'btnClick' + i }}" *ngFor="let count of button; let i = index" 
+    [ngClass]="(i + 1) == 5  ? 'color' : ' '"
+    [ngStyle]="{'background-color':(i + 1) == 5 ? 'blue' : 'white'}">
+    Button Click {{ i + 1 }}
+</div>

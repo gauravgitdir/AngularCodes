@@ -1,0 +1,22 @@
+<main>
+  <section>
+    <div class="row">
+      <ul class="row1">
+        <li
+          role="presentation"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a routerLink="/step1">Step1</a>
+        </li>
+        <li role="presentation" routerLinkActive="active">
+          <a routerLink="/step2">Step2</a>
+        </li>
+        <li role="presentation" routerLinkActive="active">
+          <a routerLink="/step3">Step3</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+<router-outlet></router-outlet>

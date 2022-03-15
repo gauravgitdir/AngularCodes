@@ -1,0 +1,6 @@
+
+<input id="companyName" [(ngModel)]="companyName" type="text" />
+<div id="xyz">{{companyName}}</div>
+
+<button type="button" id="companyBtn" [disabled]=!companyName (click)="onBtnClick()">Button</button>
+

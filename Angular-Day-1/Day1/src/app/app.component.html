@@ -1,0 +1,45 @@
+<input id="firstname" [(ngModel)]="firstName" type="text" />
+<input id="lastname" [(ngModel)]="lastName" type="text" />
+<div id="username">{{ firstName }} {{ lastName }}</div>
+
+<app-dashboard></app-dashboard>
+<app-success></app-success>
+<app-failure></app-failure>
+<!-- <button (click)="onBtnClick()">Add</button>
+<p *ngIf="showProductName">{{productName}}</p> -->
+
+<div class="tooltip">
+  <img src="../../../../assets/icons/exclamation.svg" alt="exclamation" />
+  <span class="tooltiptext">Tooltip text</span>
+</div>
+
+<div class="click-to-top">
+  <img src="../../../../assets/icons/exclamation.svg" alt="exclamation" />
+  <span>Tooltip text</span>
+</div>
+
+<button
+  type="button"
+  class="btn btn-secondary"
+  data-toggle="tooltip"
+  data-placement="right"
+  title="Tooltip on right"
+  aria-describedby="tooltip481220"
+>
+  Tooltip on top
+</button>
+<span
+  class="d-inline-block"
+  tabindex="0"
+  data-toggle="tooltip"
+  title="Disabled tooltip"
+>
+  <button
+    class="btn btn-primary"
+    style="pointer-events: none"
+    type="button"
+    disabled
+  >
+    Disabled button
+  </button>
+</span>

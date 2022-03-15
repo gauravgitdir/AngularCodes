@@ -1,0 +1,10 @@
+<main>
+  <h5>Name of Students in School</h5>
+  <div id="{{'goesToSchool' + i}}" *ngFor= "let student of students; let i = index">
+      <app-school *ngIf="student.goesTo ==='School'" [i] = "i" [student] = "student" (changeGoesTo)="changeGoesTo($event)"></app-school><!--ngIf to filter students array-->
+  </div>
+  <h5>Name of Students in College</h5>
+  <div id="{{'goesToCollege' + i}}" *ngFor= "let student of students;let i = index">
+      <app-college *ngIf="student.goesTo ==='College'" [i] = "i" [student] = "student" (changeGoesTo)="changeGoesTo($event)"></app-college><!--ngIf to filter students array-->
+  </div>
+</main>

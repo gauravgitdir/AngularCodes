@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+body{
+    margin: 0;    
+    font-size: 12px;
+}
+section{
+     padding: 30px;
+     /* border: 1px solid gray; */
+     margin-top: 20px;
+
+}
+.container{
+    max-width: 480px;
+
+}
+section h5{
+    text-align: center;
+}
+form{
+    border: 1px solid green;
+    padding: 10px;
+}
+.form-group label{
+    width: 100px;
+}
+.form-group input{
+    width: 200px;
+}
+
+label{
+    font-weight: 600;
+    opacity: .7;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.form-group{
+    margin-bottom: 15px;
+    
+}
+
+.form-button button{
+    width: 100px;
+    height: 40px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #000;
+    transition: all .3s;
+}
+button{
+    color: #fff;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+.error{
+    padding: 10px 0;
+}

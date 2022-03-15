@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>User Form</h1>
+    <form class="form-login" (ngSubmit)="onSubmit(f)" #f="ngForm">
+       <div class="input">
+           <label for="email">Email : </label>
+         <input id="email" type="text" placeholder="Email" name="email" ngModel>
+            </div> <br>
+            <div class="input">
+                <label for="password">Password : </label>
+                <input id="password" type="password" placeholder="Password" name="password" ngModel>
+            </div> <br>
+        <div >
+            <button id="logIn" class="button" type="submit">Log In</button>
+        </div>
+    </form>
+</div>
